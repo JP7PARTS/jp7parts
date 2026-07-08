@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JP7 Parts</title>
+  <meta name="description" content="JP7 Parts — encontre nossas peças no Mercado Livre e na Shopee.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f1115'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Arial,sans-serif' font-weight='bold' fill='%23ffcc00' text-anchor='middle'%3EJP7%3C/text%3E%3C/svg%3E">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="JP7 Parts">
+  <meta property="og:description" content="Encontre nossas peças no Mercado Livre e na Shopee.">
+  <meta property="og:url" content="https://jp7parts.com.br">
+
+  <style>
+    :root {
+      --ml: #ffe600;
+      --ml-text: #2d3277;
+      --shopee: #ee4d2d;
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #f2f4f8;
+      background: radial-gradient(120% 120% at 50% 0%, #1a1d23 0%, #0f1115 60%, #0a0b0e 100%);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      width: 100%;
+      max-width: 440px;
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 220px;
+      width: 60%;
+      height: auto;
+      margin: 0 auto 8px;
+      display: block;
+    }
+
+    /* Fallback textual exibido caso logo.png ainda não exista */
+    .logo-fallback {
+      font-size: clamp(2.2rem, 9vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: 1px;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .logo-fallback span { color: #ffcc00; }
+
+    .tagline {
+      color: #9aa3b2;
+      font-size: 0.98rem;
+      margin: 10px 0 34px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 20px 22px;
+      border-radius: var(--radius);
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+      box-shadow: 0 6px 20px rgba(0,0,0,.35);
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(0,0,0,.45); }
+    .btn:active { transform: translateY(0); opacity: .9; }
+    .btn:focus-visible { outline: 3px solid #ffffff; outline-offset: 3px; }
+
+    .btn-ml { background: var(--ml); color: var(--ml-text); }
+    .btn-shopee { background: var(--shopee); color: #ffffff; }
+
+    .btn small {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      opacity: .8;
+    }
+
+    footer {
+      margin-top: 34px;
+      color: #5b6472;
+      font-size: 0.82rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img
+      class="logo"
+      src="logo.png"
+      alt="JP7 Parts"
+      onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block';">
+    <div class="logo-fallback" id="logo-fallback" style="display:none;">JP<span>7</span> PARTS</div>
+
+    <p class="tagline">Escolha onde comprar nossas peças</p>
+
+    <div class="buttons">
+      <a class="btn btn-ml"
+         href="https://www.mercadolivre.com.br/pagina/jp7parts#from=share_eshop"
+         target="_blank" rel="noopener">
+        <span>Comprar no Mercado Livre</span>
+      </a>
+
+      <a class="btn btn-shopee"
+         href="https://shopee.com.br/jp7parts"
+         target="_blank" rel="noopener">
+        <span>Comprar na Shopee</span>
+      </a>
+    </div>
+
+    <footer>© <span id="year"></span> JP7 Parts</footer>
+  </main>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
