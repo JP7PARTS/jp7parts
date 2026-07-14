@@ -134,6 +134,16 @@
       color: #5b6472;
       font-size: 0.82rem;
     }
+
+    .ig {
+      display: inline-flex;
+      color: #8b93a1;
+      margin-bottom: 12px;
+      transition: color .12s ease, transform .12s ease;
+    }
+    .ig:hover { color: #f2f4f8; transform: translateY(-1px); }
+    .ig:focus-visible { outline: 3px solid #ffffff; outline-offset: 4px; border-radius: 6px; }
+    .ig svg { width: 26px; height: 26px; display: block; }
   </style>
 </head>
 <body>
@@ -172,17 +182,20 @@
          href="mailto:falecom@jp7parts.com.br">
         <span>Falar por e-mail</span>
       </a>
-
-      <a class="btn btn-email"
-         href="https://www.instagram.com/jp7parts/"
-         target="_blank" rel="noopener">
-        <span>Instagram @jp7parts</span>
-      </a>
     </div>
 
     <p class="note">Não temos loja física. Atendimento presencial em Itapetininga-SP somente com agendamento prévio.</p>
 
-    <footer>© <span id="year"></span> JP7 Parts</footer>
+    <footer>
+      <a class="ig" href="https://www.instagram.com/jp7parts/" target="_blank" rel="noopener" aria-label="Instagram @jp7parts">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      </a>
+      <div>© <span id="year"></span> JP7 Parts</div>
+    </footer>
   </main>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
